@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"> 
+    <title>{% block title %} {% endblock %}</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+</head>
+<body>
+<div class="container">
+<div class="row" >
+    {% load static %}
+    <img src="{% static 'core/images/logo.png' %}" alt="My image"/>
+
+</div>
+<nav class="navbar navbar-default">
+    <ul class="nav navbar-nav">
+      <li><a href="/core">Home</a></li>
+      <li><a href="/admin/core">Admininstrator</a></li>
+    </ul>
+
+</nav>
+<div class="container">
+    <div class="row" id="content">
+        {% block content %}{% endblock %}
+    </div>
+</div>
+</div>
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
+
+</html>
